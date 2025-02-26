@@ -12,7 +12,7 @@ function Jroom() {
     const handleclick = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:5000/join", {
+            const response = await fetch("https://server-pqo0.onrender.com/join", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
