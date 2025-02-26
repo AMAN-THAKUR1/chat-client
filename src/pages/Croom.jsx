@@ -21,7 +21,7 @@ function Croom() {
         if (localStorage.getItem("code")) return
         else {
             try {
-                fetch("http://localhost:5000/create", { method: "GET" })
+                fetch("https://server-pqo0.onrender.com/create", { method: "GET" })
                     .then(res => res.json())
                     .then(data => {
                         localStorage.setItem("code", JSON.stringify(data))
@@ -35,7 +35,7 @@ function Croom() {
     }, []);
 
     useEffect(() => {
-        const newSocket = io("http://localhost:5000");
+        const newSocket = io("https://server-pqo0.onrender.com");
         setSocket(newSocket);
         newSocket.on("connect", () => { });
 
