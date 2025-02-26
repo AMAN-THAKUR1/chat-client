@@ -8,7 +8,7 @@ function Sidebar({ code, users }) {
     const navigate = useNavigate();
 
     const handleUnload = async () => {
-        await fetch("http://localhost:5000/delete", {
+        await fetch("https://server-pqo0.onrender.com/delete", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
